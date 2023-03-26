@@ -4,6 +4,29 @@
 - [Binary Search Questions](https://youtu.be/W9QJ8HaRvJQ)
 - [Binary Search in 2D Arrays](https://youtu.be/enI_KyGLYPo)
 
+# Binary Search in 2D Array Video Is Helpful but Question 2 is Confusing. [(https://youtu.be/enI_KyGLYPo)]
+# (Detailed Explaination of the Same code Theoretically, But By taking different target and different matrix example)
+- Let's say we have a sorted two-dimensional matrix like this:
+  1  2  3  4
+  5  6  7  8
+  9  10 11 12
+  13 14 15 16
+  
+ - We want to search for the number 11 in this matrix.
+
+The "search" method first initializes the number of rows and columns in the matrix. In this case, there are 4 rows and 4 columns.
+
+Since the matrix has more than one row, the algorithm uses a modified binary search to narrow down the search space to two rows that may contain the target value. It starts by finding the middle row of the matrix, which is row 2.
+
+It then checks if the middle element of this row (element 7) is less than, greater than, or equal to the target value. In this case, 7 is less than 11, so the algorithm narrows the search space to the bottom half of the matrix (rows 3 and 4).
+
+It then checks if the target value is in the middle column of these two rows (column 2). In this case, the target value 11 is in the middle column of the bottom two rows, so the algorithm performs a binary search on these two rows to locate the target value.
+
+It divides the matrix into four sections and performs a binary search on each section to locate the target value. In this case, the algorithm will first search the top-left section (elements 9 and 10), but since the target value 11 is greater than 10, it will move on to search the top-right section (elements 11 and 12). Since 11 is found in this section, the algorithm returns the row and column indices of the target value, which are [2, 2].
+
+So the intuition behind the code is to use a modified binary search algorithm to narrow down the search space in a sorted two-dimensional matrix, and then perform a binary search on the narrowed-down space to locate the target value.
+
+
 # Problems:
 
 ## Easy
